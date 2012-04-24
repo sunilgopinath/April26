@@ -45,6 +45,14 @@
                afterDelay: delay];
 }
 
+- (void) tripleTap {
+    tapCount = 3;
+    [self setNeedsDisplay];
+    
+    [self performSelector: @selector(noTap) withObject:nil
+               afterDelay:delay];
+}
+
 - (void) touchesEnded: (NSSet *) touches withEvent: (UIEvent *) event {	
 	UITouch *touch = [touches anyObject];
 	
@@ -53,13 +61,15 @@
                    afterDelay: 0.3];
 	} else if (touch.tapCount == 2) {
 		[self doubleTap];
-	}
+	} else if (touch.tapCount == 3) {
+        [self tripleTap];
+    }
 }
 
 - (void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event {
 	UITouch *touch = [touches anyObject];
 	
-	if (touch.tapCount == 2) {
+	if (touch.tapCount > 1) {
 		[NSObject cancelPreviousPerformRequestsWithTarget: self];
 	}
 }
