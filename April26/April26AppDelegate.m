@@ -8,6 +8,7 @@
 
 #import "April26AppDelegate.h"
 #import "View.h"
+#import "PuzzleView.h"
 
 @implementation April26AppDelegate
 
@@ -17,11 +18,11 @@
 {
 	// Override point for customization after application launch.
 	UIScreen *screen = [UIScreen mainScreen];
-	view = [[View alloc] initWithFrame: screen.applicationFrame];
+	puzzleView = [[PuzzleView alloc] initWithFrame: screen.applicationFrame];
 	self.window = [[UIWindow alloc] initWithFrame: screen.bounds];
 	//self.window.backgroundColor = [UIColor whiteColor];
     
-	[self.window addSubview: view];
+	[self.window addSubview: puzzleView];
 	[self.window makeKeyAndVisible];
 	return YES;
 }

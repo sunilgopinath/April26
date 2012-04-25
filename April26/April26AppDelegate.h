@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 @class View;
+@class PuzzleView;
 
 @interface April26AppDelegate : UIResponder <UIApplicationDelegate> {
 	View *view;
+    PuzzleView *puzzleView;
 	UIWindow *_window;
 }
 
