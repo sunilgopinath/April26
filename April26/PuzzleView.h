@@ -15,6 +15,8 @@
 	NSUInteger emptyCol;
 	CGFloat margin;			//width in pixels
 	NSArray *set;				//pointers to the n*n-1 TileViews
+    NSUInteger moveCount;
+    UILabel *label;
 }
 
 - (void) place: (TileView *) tileView atRow: (NSUInteger) row col: (NSUInteger) col;

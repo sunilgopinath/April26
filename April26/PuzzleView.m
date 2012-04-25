@@ -20,6 +20,11 @@
 		// Initialization code
 		self.backgroundColor = [UIColor whiteColor];
         
+        //Put upper left corner of label in upper left corner of View.
+		//Make label just big enough to hold the string.
+        
+
+        
 		//Rows are numbered from top to bottom, starting at 0.
 		//Columns are numbered from left to right, starting at 0.
 		//The empty location is initially in the lower left corner.
@@ -27,6 +32,8 @@
 		emptyRow = n - 1;
 		emptyCol = 0;
 		margin = 1;
+        NSUInteger randomMoves = 0;
+        
         
 		set = [NSArray arrayWithObjects:
                [[TileView alloc] initWithView: self row: 0 col: 0],
@@ -62,11 +69,20 @@
                                  viewSize.height
                                  );
         for (int i = 0; i < 50; ++i) {
+            randomMoves++;
             NSUInteger r = rand() % set.count;
             TileView *touch = [set objectAtIndex: r];
             [touch touchesBegan: nil withEvent: nil];
         }
+        moveCount = 0;
+        
 
+        label = [[UILabel alloc] initWithFrame: CGRectMake(0, 40, 200, 500)];
+        label.textColor = [UIColor blueColor];
+		label.backgroundColor = [UIColor clearColor];
+		label.font = [UIFont systemFontOfSize: 20];
+		label.text = @"Moves: 0";
+		[self addSubview: label];
 	}
 	return self;
 }
@@ -75,7 +91,15 @@
 
 - (void) place: (TileView *) tileView atRow: (NSUInteger) row col: (NSUInteger) col;
 {
-	CGSize size = tileView.bounds.size;
+	moveCount++;
+    NSLog(@"user has made %d moves", moveCount);
+    if(moveCount > 20) {
+        label.text = [NSString stringWithFormat: @"Seriously?"];        
+    }
+    sleep(2);
+    label.text = [NSString stringWithFormat: @"Moves: %u", moveCount];
+    
+    CGSize size = tileView.bounds.size;
     
 	tileView.center = CGPointMake(
                                   col * (size.width  + margin),
