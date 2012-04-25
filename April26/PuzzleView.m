@@ -28,7 +28,7 @@
 		emptyCol = 0;
 		margin = 1;
         
-		set = [NSSet setWithObjects:
+		set = [NSArray arrayWithObjects:
                [[TileView alloc] initWithView: self row: 0 col: 0],
                [[TileView alloc] initWithView: self row: 0 col: 1],
                [[TileView alloc] initWithView: self row: 0 col: 2],
@@ -50,7 +50,7 @@
 		//Place origin of View at center of upper left TileView.
 		//Assume that each TileView is the same size.
         
-		TileView *tileView = [set anyObject];
+		TileView *tileView = [set objectAtIndex:0];
 		CGSize tileSize = tileView.image.size;
 		CGSize viewSize = self.bounds.size;
 		CGFloat half = (n - 1) / 2;
@@ -61,6 +61,12 @@
                                  viewSize.width,
                                  viewSize.height
                                  );
+        for (int i = 0; i < 50; ++i) {
+            NSUInteger r = rand() % set.count;
+            TileView *touch = [set objectAtIndex: r];
+            [touch touchesBegan: nil withEvent: nil];
+        }
+
 	}
 	return self;
 }

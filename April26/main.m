@@ -13,6 +13,7 @@
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
+        srand(time(NULL));
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([April26AppDelegate class]));
     }
 }

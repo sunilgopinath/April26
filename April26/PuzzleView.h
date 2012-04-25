@@ -14,7 +14,7 @@
 	NSUInteger emptyRow;	//location of empty position
 	NSUInteger emptyCol;
 	CGFloat margin;			//width in pixels
-	NSSet *set;				//pointers to the n*n-1 TileViews
+	NSArray *set;				//pointers to the n*n-1 TileViews
 }
 
 - (void) place: (TileView *) tileView atRow: (NSUInteger) row col: (NSUInteger) col;
