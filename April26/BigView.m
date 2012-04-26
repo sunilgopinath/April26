@@ -10,6 +10,7 @@
 #import "PuzzleView.h"
 #import "View.h"
 #import "EtchView.h"
+#import "IkeaView.h"
 
 @implementation BigView
 
@@ -22,6 +23,7 @@
                  [[View alloc] initWithFrame:self.bounds],
                  [[PuzzleView alloc] initWithFrame:self.bounds],
                  [[EtchView alloc] initWithFrame:self.bounds],
+                 [[IkeaView alloc] initWithFrame:self.bounds],
                  nil
                  ];
         index = 0;
