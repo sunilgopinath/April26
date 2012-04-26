@@ -10,6 +10,7 @@
 
 @interface EtchView : UIView {
 	CGMutablePathRef path;
+    UIButton *button;
 }
 
 - (void) clearPath;

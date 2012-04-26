@@ -17,6 +17,29 @@
         // Initialization code
         self.backgroundColor = [UIColor whiteColor];
         path = CGPathCreateMutable();
+        
+        button = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+        CGRect b = self.bounds;
+        NSString *string = @"Hello, World!";
+		UIFont *font = [UIFont systemFontOfSize: 32];
+		CGSize s = [string sizeWithFont: font];
+        
+		button.frame = CGRectMake(
+                                  b.origin.x + (b.size.width - s.width) / 2,
+                                  b.origin.y + (b.size.height - s.height) / 2,
+                                  s.width,
+                                  s.height
+                                  );
+        
+		[button setTitleColor: [UIColor redColor] forState: UIControlStateNormal];
+		[button setTitle: string forState: UIControlStateNormal];
+        
+		[button addTarget: self
+                   action: @selector(clearPath:)
+         forControlEvents: UIControlEventTouchUpInside
+         ];
+        
+        [self addSubview:button];
     }
     return self;
 }

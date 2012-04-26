@@ -34,8 +34,7 @@
                                   size.width,
                                   size.height
                                   );
-        
-		[button setTitleColor: [UIColor cyanColor] forState: UIControlStateDisabled]; 
+		[button setTitleColor: [UIColor colorWithRed:255/255.0 green:251/255.0 blue:204/255.0 alpha:0.2] forState: UIControlStateDisabled]; 
         [button setTitleColor: [UIColor redColor] forState: UIControlStateNormal];
         [button setTitle: string forState: UIControlStateNormal];
 		[button addTarget: self

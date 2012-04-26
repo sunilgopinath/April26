@@ -85,13 +85,13 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "April26/ButtonView.m"
-         timestampString = "357164743.55019"
+         filePath = "April26/BigView.m"
+         timestampString = "357176662.155979"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "38"
-         endingLineNumber = "38"
-         landmarkName = "-initWithFrame:"
+         startingLineNumber = "124"
+         endingLineNumber = "124"
+         landmarkName = "-swipe:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

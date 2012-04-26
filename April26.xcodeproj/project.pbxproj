@@ -19,6 +19,8 @@
 		0F3A66F715479F86009CEAC1 /* 21.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3A66EE15479F86009CEAC1 /* 21.png */; };
 		0F3A66F815479F86009CEAC1 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3A66EF15479F86009CEAC1 /* 22.png */; };
 		0F3A66FA1547AD6C009CEAC1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3A66F91547AD6B009CEAC1 /* AudioToolbox.framework */; };
+		0F440B4E154A0D40000CD198 /* next.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0F440B4C154A0D40000CD198 /* next.jpg */; };
+		0F440B4F154A0D40000CD198 /* prev.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0F440B4D154A0D40000CD198 /* prev.jpg */; };
 		0F963A4F1548FF9400EE7E21 /* beep-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F963A4E1548FF9400EE7E21 /* beep-1.mp3 */; };
 		0FEDE7A715498DA300204CC5 /* BigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEDE7A615498DA300204CC5 /* BigView.m */; };
 		0FEDE7AA154992C900204CC5 /* EtchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEDE7A9154992C900204CC5 /* EtchView.m */; };
@@ -49,6 +51,8 @@
 		0F3A66EE15479F86009CEAC1 /* 21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 21.png; path = ../../Puzzle/21.png; sourceTree = "<group>"; };
 		0F3A66EF15479F86009CEAC1 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 22.png; path = ../../Puzzle/22.png; sourceTree = "<group>"; };
 		0F3A66F91547AD6B009CEAC1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0F440B4C154A0D40000CD198 /* next.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = next.jpg; sourceTree = SOURCE_ROOT; };
+		0F440B4D154A0D40000CD198 /* prev.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = prev.jpg; sourceTree = SOURCE_ROOT; };
 		0F963A4E1548FF9400EE7E21 /* beep-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-1.mp3"; sourceTree = SOURCE_ROOT; };
 		0FEDE7A515498DA300204CC5 /* BigView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigView.h; sourceTree = "<group>"; };
 		0FEDE7A615498DA300204CC5 /* BigView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigView.m; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 		0FF88D291546363700530EB8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0F440B4C154A0D40000CD198 /* next.jpg */,
+				0F440B4D154A0D40000CD198 /* prev.jpg */,
 				0FEDE7AE1549AB3A00204CC5 /* chinese.mp3 */,
 				0F963A4E1548FF9400EE7E21 /* beep-1.mp3 */,
 				0F3A66E715479F86009CEAC1 /* 00.png */,
@@ -225,6 +231,8 @@
 				0F3A66F815479F86009CEAC1 /* 22.png in Resources */,
 				0F963A4F1548FF9400EE7E21 /* beep-1.mp3 in Resources */,
 				0FEDE7AF1549AB3A00204CC5 /* chinese.mp3 in Resources */,
+				0F440B4E154A0D40000CD198 /* next.jpg in Resources */,
+				0F440B4F154A0D40000CD198 /* prev.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

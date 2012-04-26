@@ -14,6 +14,9 @@
     
 	//index in views of the currently displayed little view: 0 or 1
 	NSUInteger index;
+    UIButton *previous;
+    UIButton *next;
+    
 }
 
 
