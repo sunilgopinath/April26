@@ -18,14 +18,16 @@
 		self.backgroundColor = [UIColor whiteColor];
 		button = [UIButton buttonWithType: UIButtonTypeRoundedRect];
         
+        //we need to call the app delegate to use the sound id
+        appDelegate = (April26AppDelegate *)[[UIApplication sharedApplication] delegate];
+        
 		//Center the button in the view.
 		CGRect b = self.bounds;
-        NSString *string = @"Chinese sound effect";
-        UIFont *font = [UIFont systemFontOfSize: 20];
-		CGSize size = [string sizeWithFont: font];
+        NSString *string = @"Short";
         
-        appDelegate = (April26AppDelegate *)[[UIApplication sharedApplication] delegate];
-
+        //create golden rectangle dimensions
+        CGFloat side = 100;
+        CGSize size = CGSizeMake(((1 + sqrt(5))/2)*side, side);	//size of button
 		button.frame = CGRectMake(
                                   b.origin.x + (b.size.width - size.width) / 2,
                                   b.origin.y + (b.size.height - size.height) / 2,
@@ -33,9 +35,9 @@
                                   size.height
                                   );
         
-		[button setTitleColor: [UIColor redColor] forState: UIControlStateNormal];
-		[button setTitle: @"Chinese sound effect" forState: UIControlStateNormal];
-        
+		[button setTitleColor: [UIColor cyanColor] forState: UIControlStateDisabled]; 
+        [button setTitleColor: [UIColor redColor] forState: UIControlStateNormal];
+        [button setTitle: string forState: UIControlStateNormal];
 		[button addTarget: self
                    action: @selector(touchUpInside:)
          forControlEvents: UIControlEventTouchUpInside
@@ -52,9 +54,16 @@
 	NSLog(@"The \"%@\" button was pressed.",
 		  [sender titleForState: UIControlStateNormal]);
     
-	//AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    AudioServicesAddSystemSoundCompletion(
+                                          appDelegate->chineseSID, NULL, NULL, complete,
+                                          (__bridge void *)((UIButton *)sender));
+
+	//udioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 	AudioServicesPlaySystemSound((appDelegate->chineseSID));
+    ((UIButton *)sender).enabled = NO;
+
 }
+ 
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -64,4 +73,9 @@
 }
 */
 
+static void complete(SystemSoundID sid, void *p)
+{
+	UIButton *button = (__bridge UIButton *)p;
+	button.enabled = YES;
+}
 @end
