@@ -23,6 +23,8 @@
 		0FEDE7A715498DA300204CC5 /* BigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEDE7A615498DA300204CC5 /* BigView.m */; };
 		0FEDE7AA154992C900204CC5 /* EtchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEDE7A9154992C900204CC5 /* EtchView.m */; };
 		0FEDE7AD15499CAD00204CC5 /* IkeaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEDE7AC15499CAD00204CC5 /* IkeaView.m */; };
+		0FEDE7AF1549AB3A00204CC5 /* chinese.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0FEDE7AE1549AB3A00204CC5 /* chinese.mp3 */; };
+		0FEDE7B21549AE2600204CC5 /* ButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEDE7B11549AE2600204CC5 /* ButtonView.m */; };
 		0FF88D231546363700530EB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF88D221546363700530EB8 /* UIKit.framework */; };
 		0FF88D251546363700530EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF88D241546363700530EB8 /* Foundation.framework */; };
 		0FF88D271546363700530EB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF88D261546363700530EB8 /* CoreGraphics.framework */; };
@@ -54,6 +56,9 @@
 		0FEDE7A9154992C900204CC5 /* EtchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EtchView.m; sourceTree = "<group>"; };
 		0FEDE7AB15499CAD00204CC5 /* IkeaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IkeaView.h; sourceTree = "<group>"; };
 		0FEDE7AC15499CAD00204CC5 /* IkeaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IkeaView.m; sourceTree = "<group>"; };
+		0FEDE7AE1549AB3A00204CC5 /* chinese.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = chinese.mp3; path = ../chinese.mp3; sourceTree = "<group>"; };
+		0FEDE7B01549AE2600204CC5 /* ButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonView.h; sourceTree = "<group>"; };
+		0FEDE7B11549AE2600204CC5 /* ButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonView.m; sourceTree = "<group>"; };
 		0FF88D1E1546363700530EB8 /* April26.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = April26.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF88D221546363700530EB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0FF88D241546363700530EB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,6 +119,8 @@
 		0FF88D281546363700530EB8 /* April26 */ = {
 			isa = PBXGroup;
 			children = (
+				0FEDE7B01549AE2600204CC5 /* ButtonView.h */,
+				0FEDE7B11549AE2600204CC5 /* ButtonView.m */,
 				0FEDE7AB15499CAD00204CC5 /* IkeaView.h */,
 				0FEDE7AC15499CAD00204CC5 /* IkeaView.m */,
 				0FEDE7A8154992C900204CC5 /* EtchView.h */,
@@ -136,6 +143,7 @@
 		0FF88D291546363700530EB8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0FEDE7AE1549AB3A00204CC5 /* chinese.mp3 */,
 				0F963A4E1548FF9400EE7E21 /* beep-1.mp3 */,
 				0F3A66E715479F86009CEAC1 /* 00.png */,
 				0F3A66E815479F86009CEAC1 /* 01.png */,
@@ -216,6 +224,7 @@
 				0F3A66F715479F86009CEAC1 /* 21.png in Resources */,
 				0F3A66F815479F86009CEAC1 /* 22.png in Resources */,
 				0F963A4F1548FF9400EE7E21 /* beep-1.mp3 in Resources */,
+				0FEDE7AF1549AB3A00204CC5 /* chinese.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +243,7 @@
 				0FEDE7A715498DA300204CC5 /* BigView.m in Sources */,
 				0FEDE7AA154992C900204CC5 /* EtchView.m in Sources */,
 				0FEDE7AD15499CAD00204CC5 /* IkeaView.m in Sources */,
+				0FEDE7B21549AE2600204CC5 /* ButtonView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

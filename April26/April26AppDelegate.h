@@ -16,7 +16,7 @@
     BigView *bigView;
 	UIWindow *_window;
     @public SystemSoundID sid;
-    
+    @public SystemSoundID chineseSID;
 }
 
 

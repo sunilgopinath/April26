@@ -30,6 +30,14 @@
 		NSLog(@"AudioServicesCreateSystemSoundID error == %ld", error);
 	}
     
+    // chinese sound effect
+    NSString *chineseSound = [bundle pathForResource: @"chinese" ofType: @"mp3"];
+    NSURL *chineseUrl = [NSURL fileURLWithPath: chineseSound isDirectory: NO];
+    
+    error = AudioServicesCreateSystemSoundID((__bridge CFURLRef)chineseUrl, &chineseSID);
+	if (error != kAudioServicesNoError) {
+		NSLog(@"AudioServicesCreateSystemSoundID error == %ld", error);
+	}
     
 	// Override point for customization after application launch.
 	UIScreen *screen = [UIScreen mainScreen];

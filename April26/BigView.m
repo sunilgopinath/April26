@@ -11,6 +11,7 @@
 #import "View.h"
 #import "EtchView.h"
 #import "IkeaView.h"
+#import "ButtonView.h"
 
 @implementation BigView
 
@@ -24,6 +25,7 @@
                  [[PuzzleView alloc] initWithFrame:self.bounds],
                  [[EtchView alloc] initWithFrame:self.bounds],
                  [[IkeaView alloc] initWithFrame:self.bounds],
+                 [[ButtonView alloc] initWithFrame:self.bounds],
                  nil
                  ];
         index = 0;

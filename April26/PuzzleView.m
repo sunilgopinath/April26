@@ -96,7 +96,6 @@
     if(moveCount > 20) {
         label.text = [NSString stringWithFormat: @"Seriously?"];        
     }
-    sleep(2);
     label.text = [NSString stringWithFormat: @"Moves: %u", moveCount];
     
     CGSize size = tileView.bounds.size;
