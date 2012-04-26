@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>	//needed for SystemSoundID
 
-@class View;
-@class PuzzleView;
+@class BigView;
 
 @interface April26AppDelegate : UIResponder <UIApplicationDelegate> {
-	View *view;
-    PuzzleView *puzzleView;
+
+    BigView *bigView;
 	UIWindow *_window;
     @public SystemSoundID sid;
+    
 }
 
 

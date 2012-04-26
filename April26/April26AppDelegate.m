@@ -7,11 +7,10 @@
 //
 
 #import "April26AppDelegate.h"
-#import "View.h"
-#import "PuzzleView.h"
+#import "BigView.h"
+#import "EtchView.h"
 
 @implementation April26AppDelegate
-
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -32,13 +31,13 @@
 	}
     
     
-    // Override point for customization after application launch.
+	// Override point for customization after application launch.
 	UIScreen *screen = [UIScreen mainScreen];
-	puzzleView = [[PuzzleView alloc] initWithFrame: screen.applicationFrame];
+	bigView = [[BigView alloc] initWithFrame: screen.applicationFrame];
 	self.window = [[UIWindow alloc] initWithFrame: screen.bounds];
 	//self.window.backgroundColor = [UIColor whiteColor];
     
-	[self.window addSubview: puzzleView];
+	[self.window addSubview: bigView];
 	[self.window makeKeyAndVisible];
 	return YES;
 }
@@ -53,6 +52,7 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
