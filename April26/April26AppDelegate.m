@@ -16,7 +16,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	// Override point for customization after application launch.
+    // Override point for customization after application launch.
+	NSBundle *bundle = [NSBundle mainBundle];
+	NSLog(@"bundle.bundlePath == \"%@\"", bundle.bundlePath);	
+    
+	NSString *filename = [bundle pathForResource: @"beep-1" ofType: @"mp3"];
+	NSLog(@"filename == \"%@\"", filename);
+    
+	NSURL *url = [NSURL fileURLWithPath: filename isDirectory: NO];
+	NSLog(@"url == \"%@\"", url);
+    
+	OSStatus error = AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &sid);
+	if (error != kAudioServicesNoError) {
+		NSLog(@"AudioServicesCreateSystemSoundID error == %ld", error);
+	}
+    
+    
+    // Override point for customization after application launch.
 	UIScreen *screen = [UIScreen mainScreen];
 	puzzleView = [[PuzzleView alloc] initWithFrame: screen.applicationFrame];
 	self.window = [[UIWindow alloc] initWithFrame: screen.bounds];

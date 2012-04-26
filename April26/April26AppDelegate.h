@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>	//needed for SystemSoundID
+
 @class View;
 @class PuzzleView;
 
@@ -14,6 +16,7 @@
 	View *view;
     PuzzleView *puzzleView;
 	UIWindow *_window;
+    @public SystemSoundID sid;
 }
 
 

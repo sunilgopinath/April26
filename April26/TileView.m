@@ -9,6 +9,7 @@
 #import "TileView.h"
 #import "PuzzleView.h"
 
+
 @implementation TileView
 
 - (id) initWithView: (PuzzleView *) v row: (NSUInteger) r col: (NSUInteger) c {
@@ -18,7 +19,10 @@
 		NSLog(@"could not find file %u%u.png", r, c);
 		return nil;
 	}
-    
+    appDelegate = (April26AppDelegate *)[[UIApplication sharedApplication] delegate];
+    //and then access the variable by appDelegate.variable
+    sid = &(appDelegate->sid);
+    //do something with mainWindow
 	self = [super initWithImage: image];
 	if (self) {
 		// Initialization code
@@ -56,7 +60,10 @@
                          animations: ^{[view place: self atRow: row col: col];}
                          completion: NULL
          ];
-	}
+	} else {
+        NSLog(@"play sound");
+        AudioServicesPlaySystemSound((appDelegate->sid));
+    }
 }
 
 @end

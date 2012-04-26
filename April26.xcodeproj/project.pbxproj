@@ -18,6 +18,8 @@
 		0F3A66F615479F86009CEAC1 /* 20.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3A66ED15479F86009CEAC1 /* 20.png */; };
 		0F3A66F715479F86009CEAC1 /* 21.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3A66EE15479F86009CEAC1 /* 21.png */; };
 		0F3A66F815479F86009CEAC1 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3A66EF15479F86009CEAC1 /* 22.png */; };
+		0F3A66FA1547AD6C009CEAC1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3A66F91547AD6B009CEAC1 /* AudioToolbox.framework */; };
+		0F963A4F1548FF9400EE7E21 /* beep-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F963A4E1548FF9400EE7E21 /* beep-1.mp3 */; };
 		0FF88D231546363700530EB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF88D221546363700530EB8 /* UIKit.framework */; };
 		0FF88D251546363700530EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF88D241546363700530EB8 /* Foundation.framework */; };
 		0FF88D271546363700530EB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF88D261546363700530EB8 /* CoreGraphics.framework */; };
@@ -41,6 +43,8 @@
 		0F3A66ED15479F86009CEAC1 /* 20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20.png; path = ../../Puzzle/20.png; sourceTree = "<group>"; };
 		0F3A66EE15479F86009CEAC1 /* 21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 21.png; path = ../../Puzzle/21.png; sourceTree = "<group>"; };
 		0F3A66EF15479F86009CEAC1 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 22.png; path = ../../Puzzle/22.png; sourceTree = "<group>"; };
+		0F3A66F91547AD6B009CEAC1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0F963A4E1548FF9400EE7E21 /* beep-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-1.mp3"; sourceTree = SOURCE_ROOT; };
 		0FF88D1E1546363700530EB8 /* April26.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = April26.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF88D221546363700530EB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0FF88D241546363700530EB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F3A66FA1547AD6C009CEAC1 /* AudioToolbox.framework in Frameworks */,
 				0FF88D231546363700530EB8 /* UIKit.framework in Frameworks */,
 				0FF88D251546363700530EB8 /* Foundation.framework in Frameworks */,
 				0FF88D271546363700530EB8 /* CoreGraphics.framework in Frameworks */,
@@ -89,6 +94,7 @@
 		0FF88D211546363700530EB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F3A66F91547AD6B009CEAC1 /* AudioToolbox.framework */,
 				0FF88D221546363700530EB8 /* UIKit.framework */,
 				0FF88D241546363700530EB8 /* Foundation.framework */,
 				0FF88D261546363700530EB8 /* CoreGraphics.framework */,
@@ -115,6 +121,7 @@
 		0FF88D291546363700530EB8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0F963A4E1548FF9400EE7E21 /* beep-1.mp3 */,
 				0F3A66E715479F86009CEAC1 /* 00.png */,
 				0F3A66E815479F86009CEAC1 /* 01.png */,
 				0F3A66E915479F86009CEAC1 /* 02.png */,
@@ -193,6 +200,7 @@
 				0F3A66F615479F86009CEAC1 /* 20.png in Resources */,
 				0F3A66F715479F86009CEAC1 /* 21.png in Resources */,
 				0F3A66F815479F86009CEAC1 /* 22.png in Resources */,
+				0F963A4F1548FF9400EE7E21 /* beep-1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

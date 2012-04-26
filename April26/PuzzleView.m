@@ -68,7 +68,7 @@
                                  viewSize.width,
                                  viewSize.height
                                  );
-        for (int i = 0; i < 50; ++i) {
+        for (int i = 0; i < 5; ++i) {
             randomMoves++;
             NSUInteger r = rand() % set.count;
             TileView *touch = [set objectAtIndex: r];

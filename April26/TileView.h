@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>	//needed for SystemSoundID
+#import "April26AppDelegate.h"
 @class PuzzleView;
 
 @interface TileView: UIImageView {
 	PuzzleView *view;
 	NSUInteger row;	//current position of this tile
 	NSUInteger col;
+    SystemSoundID *sid;
+    April26AppDelegate *appDelegate;
+
 }
 
 - (id) initWithView: (PuzzleView *) v row: (NSUInteger) r col: (NSUInteger) c;
